@@ -15,7 +15,7 @@ app.use(routes);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(__dirname, "client/build"));
+  path.join(express.static(__dirname, "client/build"));
 }
 
 // Send every request to the React app
